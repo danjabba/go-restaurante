@@ -9,7 +9,6 @@ type UserDocumentType struct {
 	Base
 	Label        string `gorm:"unique:idx_label,type:varchar(25)" json:"label"`
 	Abbreviation string `gorm:"unique:idx_abbreviation,type:varchar(25)" json:"abbreviation"`
-	Slug         string `gorm:"unique:idx_slug,type:varchar(25)" json:"slug"`
 }
 
 // TableName ...
