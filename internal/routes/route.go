@@ -10,4 +10,5 @@ func LoadRoutes(e *echo.Echo) {
 	RegisterUserDocumentTypesRoutes(e)
 	RegisterUSersRoutes(e)
 	RegisterRestaurantsRoutes(e)
+	RegisterFoodsRoutes(e)
 }
