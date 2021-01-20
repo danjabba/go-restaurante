@@ -10,26 +10,26 @@ import (
 func main() {
 
 	db := tools.GetConnection()
+	/*
+		err := db.AutoMigrate(&models.Drink{})
+		if err != nil {
+			fmt.Println(err)
+		}
 
-	err := db.AutoMigrate(&models.Drink{})
+			err = db.AutoMigrate(&models.Food{})
+			if err != nil {
+				fmt.Println(err)
+			}
+
+			err = db.AutoMigrate(&models.Restaurant{})
+			if err != nil {
+				fmt.Println(err)
+			}
+	*/
+	err := db.AutoMigrate(&models.UserDocumentType{})
 	if err != nil {
 		fmt.Println(err)
-	}
-	/*
-		err = db.AutoMigrate(&models.Food{})
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		err = db.AutoMigrate(&models.Restaurant{})
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		err = db.AutoMigrate(&models.UserDocumentType{})
-		if err != nil {
-			fmt.Println(err)
-		}
+	} /*
 
 		err = db.AutoMigrate(&models.User{})
 		if err != nil {
