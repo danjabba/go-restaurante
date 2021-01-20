@@ -8,7 +8,7 @@ type Drink struct {
 	Name        string   `gorm:"type:varchar(20)" json:"name"`
 	Description string   `gorm:"type:varchar(50)" json:"description"`
 	Ingredients []string `gorm:"type:varchar(50)" json:"ingredients"`
-	Price       float64  `gorm:"type:varchar(15)" json:"price"`
+	Price       int      `gorm:"type:varchar(15)" json:"price"`
 }
 
 // TableName ...

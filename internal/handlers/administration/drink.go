@@ -16,7 +16,7 @@ type createDrinkPayload struct {
 	Name        string   `bson:"name" json:"name"`
 	Description string   `bson:"description" json:"description"`
 	Ingredients []string `bson:"ingredients" json:"ingredients"`
-	Price       float64  `bson:"price" json:"price"`
+	Price       int      `bson:"price" json:"price"`
 }
 
 // updateDrinkPayload ...
@@ -24,7 +24,7 @@ type updateDrinkPayload struct {
 	Name        string   `bson:"name" json:"name"`
 	Description string   `bson:"description" json:"description"`
 	Ingredients []string `bson:"ingredients" json:"ingredients"`
-	Price       float64  `bson:"price" json:"price"`
+	Price       int      `bson:"price" json:"price"`
 }
 
 // ListDrink ...
