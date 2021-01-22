@@ -14,7 +14,7 @@ import (
 // createUserPayload ...
 type createUserPayload struct {
 	DniType   string `bson:"dni_type" json:"dni_type"`
-	DniNumber string `bson:"dni_number" validate:"required,min=4,max=50"`
+	DniNumber string `bson:"dni_number" validate:"required,min=4,max=50" json:"dni_number"`
 	Name      string `bson:"name" json:"name" validate:"required,min=4,max=50"`
 	LastName  string `bson:"last_name" json:"last_name" validate:"required,min=4,max=50"`
 	Email     string `bson:"email" json:"email" validate:"email"`
@@ -23,7 +23,7 @@ type createUserPayload struct {
 // updateUserPayload ...
 type updateUserPayload struct {
 	DniType   string `bson:"dni_type" json:"dni_type"`
-	DniNumber string `bson:"dni_number" validate:"required,min=4,max=50"`
+	DniNumber string `bson:"dni_number" validate:"required,min=4,max=50" json:"dni_number"`
 	Name      string `bson:"name" json:"name" validate:"required,min=4,max=50"`
 	LastName  string `bson:"last_name" json:"last_name" validate:"required,min=4,max=50"`
 	Email     string `bson:"email" json:"email" validate:"email"`

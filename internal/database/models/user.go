@@ -6,8 +6,8 @@ import "gorm.io/gorm"
 type User struct {
 	Base
 	DniType          string           `json:"dni_type"`
-	UserDocumentType UserDocumentType `gorm:"foreingKey:DniType"`
-	DniNumber        string           `gorm:"type:varchar(25)" validate:"num"`
+	UserDocumentType UserDocumentType `gorm:"foreignKey:DniType"`
+	DniNumber        string           `gorm:"unique:idx_dni_number,type:varchar(25)" json:"dni_number"`
 	Name             string           `gorm:"type:varchar(25)" json:"name"`
 	LastName         string           `gorm:"type:varchar(25)" json:"last_name"`
 	Email            string           `gorm:"type:varchar(25)" json:"email"`
